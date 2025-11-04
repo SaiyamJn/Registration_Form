@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Application Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Student Registration Form</h1>
+
+    <form id="regForm" action="submit.php" method="POST">
+      <label>Name</label>
+      <input type="text" name="name" id="name">
+
+      <label>Email</label>
+      <input type="email" name="email" id="email">
+
+      <label>Course</label>
+      <select name="course" id="course">
+        <option value="">Select</option>
+        <option value="CSE">CSE</option>
+        <option value="ISE">ISE</option>
+        <option value="ECE">ECE</option>
+        <option value="ME">ME</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
