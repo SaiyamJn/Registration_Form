@@ -66,12 +66,12 @@
         $('#' + $(this).attr('id') + '-error').hide();
       });
 
-      // Phone number validation - only allow digits
+      // Phone number - only digs
       $('#phone').on('input', function() {
         this.value = this.value.replace(/[^0-9]/g, '');
       });
 
-      // Form submission validation
+      //valid submission
       $('#regForm').on('submit', function(e) {
         e.preventDefault();
         let isValid = true;
@@ -80,7 +80,7 @@
         $('input').removeClass('error');
         $('.error-msg').hide();
 
-        // Validate Full Name
+        // Vaild Name
         const fullname = $('#fullname').val().trim();
         if (fullname === '') {
           $('#fullname').addClass('error');
@@ -97,7 +97,7 @@
           isValid = false;
         }
 
-        // Validate Phone (exactly 10 digits)
+        // Validate Phoneno.
         const phone = $('#phone').val().trim();
         if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
           $('#phone').addClass('error');
@@ -105,7 +105,7 @@
           isValid = false;
         }
 
-        // If all validations pass, submit the form
+        // If all validations pass, submit
         if (isValid) {
           this.submit();
         }
